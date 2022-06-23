@@ -25,4 +25,17 @@
   alias hdstop="/usr/local/Cellar/hadoop/$HADOOP_VERSION/sbin/stop-all.sh"
   ```
 	- `hdstart`: hadoop クラスタを起動, `hdstop`: hadoop クラスタを停止
-	- 
+
+- Pig 
+  - HDFS のファイルに対して SQL を実行するためのスクリプト言語
+  - Mac install
+    - `brew install pig`
+    - 環境変数を設定
+      ```bash
+      export PIG_VERSION=0.17.0_1
+      export PIG_HOME=/usr/local/Cellar/pig/$PIG_VERSION/libexec
+      export PATH=$PIG_HOME/bin:$PATH
+      ```
+    - copy file onto HDFS `$ hdfs dfs -copyFromLocal ./emplist.txt /pig_data/`
+    - run `$ pig -f ./emp_split.pig`
+    - check the results `$ hdfs dfs -cat /pig_data/pigtest01/part-m-00000`

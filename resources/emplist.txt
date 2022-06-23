@@ -1,0 +1,4 @@
+1,Masazumi Koga,43,Tokyo,2500.00
+2,Satoshi Nakamoto,58,Osaka,9500
+3,John von Veumann,49,USA,2000.00
+4,Alan mathieson Turing,38,UK,6500.00
